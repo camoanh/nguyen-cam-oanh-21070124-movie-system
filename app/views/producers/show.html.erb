@@ -1,0 +1,29 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Producer</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to producers_path, class: button_class(theme: "transparent") do %>
+      All Producers
+      <% end %>
+      <%= link_to edit_producer_path(@producer), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Director:</p>
+        <p><%= @producer.Director %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Actor:</p>
+        <p><%= @producer.Actor %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Writer:</p>
+        <p><%= @producer.Writer %></p>
+      </li>
+  </ul>
+</div>
